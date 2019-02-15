@@ -2,6 +2,7 @@ public void setup()
 {
   size(600,600);
   background(0);
+  fractal(200, 200, 100, 100);
 }
 public void draw() 
 {
@@ -9,15 +10,13 @@ public void draw()
 }
 public void fractal(int x, int y, int w, int h)
 {
-  if(x >= 400) {
-    rect(x, y, fibonacci(w), fibonacci(h));
+  if(x <= 10) {
+    //rect(x, y, w, h);
   }
   else {
-    rect(x, y, fibonacci(w), fibonacci(h));
-    fractal(x+w, y+h, w+1, h+1);
+    rect(x, y, w, h);
+    fractal();
+    fractal();
+    fractal();
   }
-}
-public int fibonacci(int n)
-{
-  return 1;
 }
